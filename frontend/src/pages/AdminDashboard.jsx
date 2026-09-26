@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useEffect, useState, useCallback, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import * as Sentry from '@sentry/react';
 import { api } from '../services/api';
 import { useAuth } from '../context/AuthContext';
@@ -273,6 +274,7 @@ function PlatformHealthPanel() {
 }
 
 function WithdrawalQueue() {
+  const { t } = useTranslation();
   return (
     <>
       {rows.length === 0 ? (
@@ -417,7 +419,7 @@ function WithdrawalQueue() {
                   value={rejectReason}
                   onChange={(e) => setRejectReason(e.target.value)}
                   rows={3}
-                  placeholder="Explain why this withdrawal is rejected…"
+                  placeholder={t('admin.withdrawalRejectionPlaceholder')}
                 />
                 <button type="button" className="btn-secondary" disabled={busy} onClick={reject}>
                   Reject withdrawal
