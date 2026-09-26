@@ -1,4 +1,5 @@
 const logger = require('../config/logger');
+const { getRequestContext } = require('../config/requestContext');
 
 const SENSITIVE_PARAMS = new Set([
   'embedToken',
@@ -62,8 +63,10 @@ function requestLogger(req, res, next) {
     const path = sanitizeUrl(req.originalUrl || req.url);
     const queryParams = sanitizeQueryParams((new URL(req.originalUrl || req.url, `http://localhost`)).search);
 
+    const { requestId } = getRequestContext();
+
     const level = status >= 500 ? 'error' : status >= 400 ? 'warn' : 'info';
-    logger[level]('request', { method, path, status, duration_ms, queryParams, requestId: req.id });
+    logger[level]('request', { method, path, status, duration_ms, requestId });
   });
 
   next();

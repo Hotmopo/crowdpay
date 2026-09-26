@@ -138,6 +138,20 @@
     "testnet_title": "Aperçu testnet",
     "testnet_body": "CrowdPay est en développement actif. Les transactions utilisent actuellement des actifs du testnet Stellar sans valeur réelle."
   },
+  "offline": {
+    "banner": "Vous êtes actuellement hors ligne. Certaines fonctionnalités peuvent être limitées."
+  },
+  "thankYou": {
+    "bulkTitle": "Envoyer un message groupé de remerciement",
+    "bulkDescription": "Envoyez un message à tous les contributeurs de cette campagne.",
+    "individualTitle": "Remercier le contributeur",
+    "individualDescription": "Envoyez un message de remerciement personnel à {{name}}.",
+    "placeholder": "Écrivez votre message de remerciement...",
+    "send": "Envoyer le remerciement",
+    "sendError": "Impossible d'envoyer le message de remerciement",
+    "charactersLeft": "Caractères restants : {{count}}",
+    "sent": "Remerciement envoyé avec succès !"
+  },
   "home": {
     "hero_title": "Explorer les campagnes",
     "hero_subtitle": "Trouvez une cause à soutenir, ou suivez celles que vous soutenez déjà.",
@@ -187,7 +201,10 @@
     },
     "sortNewest": "Plus récent",
     "sortTrending": "🔥 Tendance",
-    "sortMostFunded": "Le plus financé"
+    "sortMostFunded": "Le plus financé",
+    "loadError": "Impossible de charger les campagnes pour le moment. Veuillez vérifier votre connexion.",
+    "loadErrorTitle": "Erreur de chargement",
+    "tryAgain": "Réessayer"
   },
   "campaignCard": {
     "noImage": "Aucune image de campagne",
@@ -515,6 +532,8 @@
     "disputed": "Litige en cours"
   },
   "dashboard": {
+    "contributors": "Contributeurs",
+    "sendBulkThankYou": "Envoyer un message groupé de remerciement",
     "title": "Tableau de bord",
     "restoringSession": "Restauration de votre session...",
     "walletBalance": "Solde du portefeuille",
@@ -586,115 +605,7 @@
       "contributions": "Contributions",
       "uniqueContributors": "Contributeurs uniques",
       "avgContribution": "Contribution moyenne"
-    }
-  },
-  "readingList": {
-    "title": "Liste de lecture",
-    "campaign": "campagne",
-    "campaigns": "campagnes",
-    "discoverCampaigns": "Découvrir les campagnes",
-    "searchPlaceholder": "Rechercher les campagnes sauvegardées...",
-    "allStatus": "Tous les statuts",
-    "statusInProgress": "En cours",
-    "statusCompleted": "Terminé",
-    "empty": "Votre liste de lecture est vide.",
-    "noMatches": "Aucune campagne ne correspond à votre recherche.",
-    "browseCampaigns": "Parcourir les campagnes pour les sauvegarder",
-    "raised": "collectés",
-    "removeFromList": "Retirer de la liste de lecture",
-    "view": "Voir →"
-  },
-  "offline": {
-    "banner": "Vous êtes hors ligne — les modifications peuvent ne pas être enregistrées"
-  },
-  "forgotPassword": {
-    "title": "Mot de passe oublié ?",
-    "description": "Entrez votre e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
-    "emailPlaceholder": "E-mail",
-    "sendLink": "Envoyer le lien de réinitialisation",
-    "sending": "Envoi du lien…",
-    "backTo": "Retour à"
-  },
-  "resetPassword": {
-    "title": "Réinitialiser le mot de passe",
-    "description": "Entrez votre nouveau mot de passe ci-dessous.",
-    "newPassword": "Nouveau mot de passe",
-    "newPasswordPlaceholder": "Nouveau mot de passe",
-    "confirmPassword": "Confirmer le nouveau mot de passe",
-    "confirmPasswordPlaceholder": "Confirmer le nouveau mot de passe",
-    "resetButton": "Réinitialiser le mot de passe",
-    "resetting": "Réinitialisation du mot de passe…",
-    "success": "Mot de passe réinitialisé avec succès ! Redirection vers la connexion...",
-    "invalidLink": "Lien invalide",
-    "invalidLinkDescription": "Ce lien de réinitialisation de mot de passe est invalide ou ne contient pas de jeton.",
-    "requestNewLink": "Demander un nouveau lien"
-  },
-  "opsCenter": {
-    "apiKeyPlaceholder": "Entrez la clé (ex. ops_secret_dev_key)"
-  },
-  "withdrawals": {
-    "statusExpired": "Expiré — veuillez refaire la demande",
-    "awaitingCreator": "En attente de la signature du créateur",
-    "awaitingPlatform": "En attente du déblocage par la plateforme",
-    "releasedOnChain": "Déverrouillé sur la chaîne",
-    "deniedCancelled": "Refusé / annulé",
-    "failedSeeAudit": "Échec (voir l'audit)",
-    "evidenceLabel": "Preuves :",
-    "link": "Lien {{num}}",
-    "expiredNotice": "Le XDR de ce retrait a expiré. Veuillez annuler cette demande et en soumettre une nouvelle.",
-    "destinationHint": "La destination doit être une clé publique Stellar valide. Le montant est en {{asset}}.",
-    "useMax": "Utiliser le max",
-    "loadingBalance": "Chargement du solde…",
-    "amountLabel": "Montant ({{asset}})",
-    "evidencePlaceholder": "Preuves (reçu, facture ou lien)",
-    "amountExceedsBalance": "Le montant dépasse le solde disponible",
-    "amountExceedsBalanceBtn": "Montant supérieur au solde",
-    "submitting": "Envoi…",
-    "submitRequest": "Soumettre la demande",
-    "pendingReleaseNotice": "Vous avez un déblocage en attente. Complétez les signatures, annulez avant de signer, ou attendez la décision de la plateforme.",
-    "requestsAuditTitle": "Demandes et audit",
-    "noActivity": "Aucune activité de retrait pour le moment.",
-    "auditTrail": "Piste d'audit",
-    "hideAudit": "Masquer l'audit",
-    "cancel": "Annuler",
-    "signing": "Signature en cours…",
-    "yesSignNow": "Oui, signer maintenant",
-    "goBack": "Revenir en arrière",
-    "signInFreighter": "Signer avec Freighter",
-    "signAsCreator": "Signer en tant que créateur",
-    "confirmRelease": "Confirmer le déblocage de",
-    "to": "vers :",
-    "signatureCannotUndo": "Cette signature ne peut pas être annulée."
-  },
-  "poolManager": {
-    "contributionPools": "Pools de contribution",
-    "signInToPool": "Connectez-vous pour créer ou rejoindre un pool de contribution.",
-    "newPool": "+ Nouveau pool",
-    "poolNamePlaceholder": "Nom du pool (ex. Équipe Alpha)",
-    "descriptionPlaceholder": "Description facultative...",
-    "targetAmount": "Montant cible",
-    "targetAmountPlaceholder": "100.00",
-    "createPool": "Créer un pool",
-    "creating": "Création...",
-    "loading": "Chargement des pools...",
-    "noPools": "Aucun pool pour le moment. Soyez le premier à en créer un !",
-    "member": "{{count}} membre",
-    "member_plural": "{{count}} membres",
-    "target": "Cible",
-    "raised": "Collecté",
-    "status": {
-      "open": "Ouvert",
-      "submitted": "Soumis",
-      "cancelled": "Annulé"
     },
-    "yourShare": "Votre part",
-    "sharePlaceholder": "10.00",
-    "displayName": "Nom (facultatif)",
-    "displayNamePlaceholder": "Nom d'affichage",
-    "joinPool": "Rejoindre le pool",
-    "joining": "Rejoindre...",
-    "confirm": "Confirmer",
-    "submitPool": "Soumettre le pool",
-    "cancelPool": "Annuler le pool"
+    "sendThankYou": "Envoyer un remerciement"
   }
 }
